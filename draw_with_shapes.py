@@ -8,27 +8,15 @@ screen.fill((255, 255, 255)) # Fill the screen with white
 # Draw the ground
 pygame.draw.line(screen, (0, 0, 0), (0, 380), (700,380))
 
-# Draw the bottom of the house
-pygame.draw.line(screen, ("red"), (120, 375), (515, 375))
-
-# Draw two walls
-#wall 1
-pygame.draw.line(screen, ("purple"), (120, 375), (120,150))
-
-#wall 2
-pygame.draw.line(screen, ("purple"), (515, 375), (515,150))
+# Draw the house
+pygame.draw.rect(screen, ("red"), ((120, 180), (200, 200)))
 
 # Draw the roof
-#bunden af taget
-pygame.draw.line(screen, ("black"), (120, 150), (515, 150))
+pygame.draw.polygon(screen, ("black"), ((120, 180), (220, 80), (320, 179)))
 
-#Højre skrå væg
-pygame.draw.line(screen, ("black"), (120, 150), (325,50))
-
-#Venstre skrå væg
-pygame.draw.line(screen, ("black"), (515, 150), (325,50))
-
-#
+#draw a sun
+pygame.draw.circle(screen, ("yellow"), (500,100), 40)
+                    
 
 # Make sure the window stays open until the user closes it
 run_flag = True
